@@ -26,6 +26,8 @@ export class LoginComponent implements AfterViewInit {
 
   login(){
     if ( this.loginForm.invalid ) {
+      console.log(this.loginForm.value);
+      
       return;  
     }
     this.usuarioService.login( this.loginForm.value ).subscribe( resp =>{
