@@ -25,9 +25,10 @@ export class LoginComponent implements AfterViewInit {
               {}
 
   login(){
+    console.log('hola');
+    
     if ( this.loginForm.invalid ) {
-      console.log(this.loginForm.value);
-      
+ 
       return;  
     }
     this.usuarioService.login( this.loginForm.value ).subscribe( resp =>{
